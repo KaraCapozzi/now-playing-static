@@ -24,7 +24,7 @@ body {
 }
 
 /*
-  This rule ensure that all images always fit in their container
+  This rule ensures that all images always fit in their container
    but are never stretched beyond their native resolution
 */
 img {
@@ -53,15 +53,15 @@ figure {
   width: 80px;
   height: 80px;
   margin: 0;
-  z-index: 100;
+  z-index: 300;
 }
 
 .site-nav {
   position: fixed;
+  height: 100%;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
   z-index: 100;
   background-color: #ffffff;
 }
@@ -75,7 +75,6 @@ figure {
 
 .site-nav-item {
   float: left;
-  width: 20%;
   height: 60px;
   padding: 0.75em;
   font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -114,6 +113,8 @@ figure {
   Hide the poster on mobile devices, only show backdrop
   TIP: Use media queries to reveal it on larger devices
 */
+
+
 .movie-poster {
   display: none;
 }
@@ -185,7 +186,6 @@ figure {
   margin-right: 0;
 }
 
-
 .about {
   background-color: #333333;
   color: #ffffff;
@@ -195,3 +195,71 @@ figure {
 .about > p {
   margin: 0;
 }
+
+@media ( min-width: 768px ) {
+  
+  .footer-nav {
+    position: left fixed;
+    width: 100%;
+    left: 0;
+  }
+
+  .site-nav-item {
+    float: left;
+     left: 2em;
+  }
+
+  .site-nav-item {
+    float: none;
+    width: initial;
+  }
+  
+  .site-nav {
+    width: 80px;
+    left: 0;
+    padding-left: .5em;
+    padding-top: 5em;
+  }
+
+  .site-nav-list {
+    width: 20px;
+    margin: 4px 4px;
+  }
+
+  .site-logo: {
+    float: none;
+    z-index: 100;
+  }
+
+  .site-logo-image {
+    width: 50px
+  }
+
+  .footer-nav-list {
+    float: left;
+     width: 100%;
+     left: 0;
+  }
+  .site-footer {
+    float: left;
+     width: 100%;
+  }
+
+	header {
+		text-align: left;
+		margin-bottom: 4rem;
+		border-bottom: .1rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+/*Once the device (or browser window) is wider than 768px,
+
+the navigation bar should move to be fixed to the left side of the window,
+the logo should be within the sidebar rather than floating on its own,
+the film overviews should be visible, and
+the footer sections should be side by side rather than stacked, with a black background 
+and white text.
+Hint Now that you're making a responsive design, you'll need to tell the browser. 
+Don't forget your <meta> viewport tag!*/
