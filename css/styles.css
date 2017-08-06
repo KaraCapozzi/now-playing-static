@@ -235,8 +235,21 @@ figure {
 }
 }
 
-@media ( min-width: 998px ) {
+@media ( min-width: 992px ) {
 
+  .movie {
+    float: left;
+    width: 33%;
+  }
+
+  .movie-poster {
+    display: initial;
+  }
+
+  .movie-backdrop {
+    display: none;
+  }
+  
 }
 /*
 @media ( max-width: 768px ) {
